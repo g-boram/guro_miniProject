@@ -69,7 +69,7 @@ String uName = mMgr.getMemberName(uId);
 								<td>내용타입</td>
 								<td>
 									<label><input type="radio" name="contentType" value="HTML"><span>HTML</span></label>
-									<label><input type="radio" name="contentType" value="TEXT"><span>TEXT</span></label>
+									<label><input type="radio" name="contentType" value="TEXT" checked ><span>TEXT</span></label>
 								</td>
 							</tr>
 						</tbody>

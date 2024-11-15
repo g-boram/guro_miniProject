@@ -29,7 +29,6 @@ $(function(){
 		}
 	
 	});	
-	
 	/* 글쓰기 페이지 게시글 등록 끝 /bbs/write.jsp */
 	
 	/* 게시글 목록으로 돌아가기 버튼 시작 /bbs/read.jsp -> /bbs/list.jsp */
