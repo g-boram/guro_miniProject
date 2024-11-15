@@ -47,6 +47,12 @@ $(function(){
 		
 		location.href = "/bbs/reply.jsp?num=" + num + "&nowPage=" + nowPage + "&keyField=" + keyField + "&keyWord=" + keyWord;
 	});
+	
+	$(document).on("click", "#replyLoginAlertBtn", function() {
+		alert("로그인 후 답변을 작성하실 수 있습니다.");
+		location.href="/member/login.jsp";
+	});
+	
 	/* 답글버튼 끝 /bbs/read.jsp -> /bbs/reply.jsp */
 	
 	/* 답글 페이지 뒤로 돌아가기 버튼 시작 */

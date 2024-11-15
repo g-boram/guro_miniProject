@@ -130,7 +130,11 @@ session.setAttribute("bean", bean);
 							%>
 							<td colspan="4" id="btnAreaTd" class="read">
 								<button type="button" id="listBtn"><%=listBtnLabel %></button>
-								<button type="button" id="replyBtn">답 변</button>
+								<% if (uId_Session == "") { %>
+									<button type="button" id="replyLoginAlertBtn" class="listBtnStyle">답 변</button>
+								<% } else { %>
+									<button type="button" id="replyBtn">답 변</button>
+								<% } %>
 								<% if(uId_Session.equals(uId)) { %>
 								<button type="button" id="modBtn">수 정</button>
 								<button type="button" id="delBtn">삭 제</button>
