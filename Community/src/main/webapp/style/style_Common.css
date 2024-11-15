@@ -456,6 +456,8 @@ main#main>div#contents h2#indexGuideMsg {
 	margin-top: 50px;
 }
 
+
+
 /* main#main div#contents 끝 */
 
 
@@ -463,11 +465,61 @@ main#main>div#contents h2#indexGuideMsg {
 /* header, mainLnb, footer 템플릿 스타일(style_Template.css) 끝 */
 /*////////////////////////////////////////////////////////////////////*/
 
+/*////////////////////////////////////////////////////////////////////*/
+/* SlideShowArea 영역 스타일 시작*/
+/*////////////////////////////////////////////////////////////////////*/
 
+#slideshowArea {
+    position: relative;
+    width: 80%; /* 화면의 80% */
+    height: 300px;
+    margin: auto;
+    overflow: hidden; /* 넘치는 이미지를 숨김 */
+     background: url('/images/your_background_image.jpg') no-repeat center center;
+    background-size: cover; /* 배경 이미지가 영역을 채우도록 설정 */
+}
 
+#slideFrame {
+    position: relative;
+}
 
+#slideFrame .slide {
+/*     display: none; 처음에 모든 이미지는 숨김 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
 
+#slideFrame img {
+    width: 100%; /* 이미지 크기를 슬라이드 크기에 맞게 설정 */
+    height: auto;
+}
+/* 텍스트 오버레이 (슬라이드 위에 텍스트 표시) */
+div#Msg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 10; /* 이미지 위에 텍스트가 보이도록 설정 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 텍스트 그림자 효과 */
+}
 
+/* 인덱스 메시지 스타일 */
+#indexGuideMsg {
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 텍스트 그림자 */
+}
 
-
-
+/*////////////////////////////////////////////////////////////////////*/
+/* SlideShowArea 영역 스타일 시작*/
+/*////////////////////////////////////////////////////////////////////*/
