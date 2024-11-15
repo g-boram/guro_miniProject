@@ -28,7 +28,7 @@ public class BoardMgr {
 	Statement stmt = null;
 	ResultSet rs = null;
 	
-	private static final String SAVEFOLDER = "D:\\git_workSpace\\guroAi_MiniProj\\Community\\src\\main\\webapp\\fileupload";
+	private static final String SAVEFOLDER = "E:\\java_Web_AI\\silsp\\jsp\\guro_miniProject\\Community\\src\\main\\webapp\\fileupload";
 	private static String encType = "UTF-8";
 	private static int maxSize = 10 * 1024 * 1024;
 	

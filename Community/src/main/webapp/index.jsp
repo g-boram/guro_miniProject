@@ -1,6 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<% String uId_Session = (String)session.getAttribute("uId_Session"); %>
+    
+<jsp:useBean id="mMgr" class="pack.dao.MemberMgr" />    
+
+<% 
+String uId_Session = (String)session.getAttribute("uId_Session"); 
+String uName = mMgr.getMemberName(uId_Session);
+%>
     
 <!DOCTYPE html>
 <html lang="ko">
@@ -33,7 +39,7 @@
 					작업 중(회원인증, BBS 등)<br>
 					메인에 노출하고 싶은 결과를 출력	
 				<% } else {
-					out.print(uId_Session + "님이 로그인했습니다.");	
+					out.print(uName + "님이 로그인했습니다.");	
 				   } %>	
 				</h2>
 			</div>
