@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context>
+	<Resource	
+		name="jdbc/dbcpConn"
+		auth="zzuPD"
+		driverClassName="com.mysql.cj.jdbc.Driver"
+		type="javax.sql.DataSource"
+		url="jdbc:mysql://localhost:3306/Community?
+			useSSL=false&amp;
+			useUnicode=true&amp;
+			serverTimezone=Asia/Seoul&amp;
+			characterEncoding=UTF8&amp;
+			allowPublicKeyRetrieval=true&amp;
+			autoReconnect=true"
+		username="root"
+		password="1234"
+		maxActive="20"
+		maxIdle="10"
+		maxWait="5000"	
+	/>
+</Context>
