@@ -19,6 +19,7 @@ public class MemberMgr {
 	ResultSet objRS = null;
 	PreparedStatement pstmt = null;
 	DBCP dbcp = null;
+	private ResultSet reAuth;
 	
 	/* 아이디 중복 검사 시작(/member/idCheck.jsp) */
 	public boolean checkId(String id) {
@@ -178,7 +179,6 @@ public class MemberMgr {
 			objRS = pstmt.executeQuery();
 			
 			if(objRS.next()) {
-				
 				int recordCnt = objRS.getInt(1);
 				if (recordCnt == 1) loginChkTF = true;
 			}
@@ -363,6 +363,35 @@ public class MemberMgr {
 		
 		return uName;
 	}
+	
+	/* 로그인 사용자 권한 반환 시작 */
+	public String setLoginQuth(String uId) {
+		String uAuth = "";
+		String sql = null;
+		
+		try {
+			
+			conn = dbcp.mtdConn();
+			sql = "select auth from member where uId=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, uId);
+			
+			objRS = pstmt.executeQuery();
+			if(objRS.next()) {
+				uAuth = objRS.getString(1);
+			}
+			
+		} catch (Exception e) {
+			System.out.println("로그인 권한 반환 중 오류발생 : " + e.getMessage());
+		} finally {
+			try {objRS.close();} catch (Exception e) {System.out.println(e.getMessage());}
+			try {pstmt.close();} catch (Exception e) {System.out.println(e.getMessage());}
+			try {conn.close();} catch (Exception e) {System.out.println(e.getMessage());}
+		}
+		
+		return uAuth;
+	}
+	
 	/* 로그인 사용자 이름 반환(/bbs/write.jsp) 끝 */
 	
 }

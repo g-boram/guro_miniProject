@@ -6,6 +6,7 @@
 request.setCharacterEncoding("UTF-8");
 String uId = request.getParameter("uId");
 String uPw = request.getParameter("uPw");
+
 boolean loginRes = mMgr.loginMember(uId, uPw);
 %>    
 
@@ -13,6 +14,8 @@ boolean loginRes = mMgr.loginMember(uId, uPw);
 <%
 if (loginRes) {
 	session.setAttribute("uId_Session", uId);
+	String loginAuth = mMgr.setLoginQuth(uId); 
+	session.setAttribute("auth_Session", loginAuth);
 %>
 	location.href="/index.jsp";
 <%

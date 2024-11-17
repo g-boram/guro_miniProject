@@ -14,7 +14,7 @@
 			allowPublicKeyRetrieval=true&amp;
 			autoReconnect=true"
 		username="root"
-		password="1234"
+		password="goboram"
 		maxActive="20"
 		maxIdle="10"
 		maxWait="5000"	

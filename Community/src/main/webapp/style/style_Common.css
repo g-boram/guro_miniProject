@@ -5,11 +5,9 @@
 
 /* div#wrap 시작 */
 div#wrap {
-    width: 1000px;
-    padding: 4px;
-    border: 1px solid #aaa;
-    border-radius: 6px;
-    margin: 20px auto;
+    width: 1400px;
+    padding: 10px;
+    margin: 0px auto;
 }
 
 hr.sepLine {    /* Separate Line 경계선*/
@@ -19,6 +17,12 @@ hr.sepLine {    /* Separate Line 경계선*/
 }
 /* div#wrap 끝 */
 
+button {	
+	color: #fff;
+	background-color: rgb(30, 30, 30);
+	border-radius: 5px;
+	cursor: pointer;
+}
 
 
 
@@ -45,17 +49,23 @@ div#wrap>main>div.joinAgree>div#licenseArea {
 div#wrap>main>div.joinAgree>div#licenseArea>div.termArea {
 	margin-bottom: 40px;
 }
+
 #wrap>main>.joinAgree>#licenseArea>.termArea>h3 {
 	width: 940px;
 	margin: 5px 20px;
 }
 #wrap>main>.joinAgree>#licenseArea>.termArea>iframe {
-	width: 940px;
+	width: 850px;
 	border: 1px solid #aaa;
 	margin: 5px 20px;
 }
+
 #wrap>main>div.joinAgree>#licenseArea>.termArea>label {
 	margin-left: 20px;
+}
+#wrap>main>div.joinAgree>#licenseArea>.termArea>label >span{
+	display: inline-block;
+	width: 300px;
 }
 #wrap>main>div.joinAgree>#licenseArea>.termArea>label>input[type=checkbox] {
 	width: 18px;
@@ -75,7 +85,7 @@ div#wrap>main>div.joinAgree>div#licenseArea>div.termArea {
 	border: none;
 	border: 1px solid #eee;
 	border-radius: 4px;
-	background-color: #0080ff;
+	background-color: rgb(30, 30, 30);
 	cursor: pointer;
 }
 
@@ -93,7 +103,7 @@ div#wrap>main>div.joinAgree>div#licenseArea>div.termArea {
 /*//////////// 회원가입 스타일 시작 /member/member.jsp //////////// */
 /*////////////////////////////////////////////////////////////////////*/
 div#wrap>main#main>div.joinInsert>form#regFrm {
-	width: 860px;
+	width: 900px;
 	padding: 4px;
 	/*border: 1px solid #f80;*/
 	margin: 0 auto;
@@ -106,16 +116,15 @@ div#wrap>main#main>div.joinInsert>form#regFrm {
 } 
 
 #wrap #regFrm>#regFrmTbl>caption {
-	color: #f3f3f3;
-	font-size: 23px;
+	color: #fff;
+	font-size: 25px;
 	font-weight: bold;
-	padding: 13px;
-	border: 3px solid rgba(0, 127, 255, 0.12);
-	background-color: rgba(0, 127, 255, 0.5);
+	padding: 15px;
+	background-color: rgb(30, 30, 30);
 }
 
 #wrap #regFrm>#regFrmTbl td {	
-	height: 48px;
+	height: 50px;
 	padding: 10px 6px;
 	border-bottom: 1px solid #ccc;
 }
@@ -374,7 +383,7 @@ div#wrap>main#main>div.loginDiv>form#loginFrm {
 	border: none;
 	margin-top: 17px;
 	margin-bottom: 7px;
-	background-color: #4e87f0;
+	background-color: rgb(30, 30, 30);
 	cursor: pointer;
 	display: block;
 }
@@ -424,7 +433,7 @@ div#wrap>main#main>div.memQuitDiv>form#memQuitFrm {
 	border: none;
 	margin-top: 17px;
 	margin-bottom: 7px;
-	background-color: #4e87f0;
+	background-color: rgb(30, 30, 30);
 	cursor: pointer;
 }
 
@@ -449,6 +458,7 @@ main#main>div#contents {
 	margin: 0 10px;
 	flex: 1;
 }
+
 
 main#main>div#contents h2#indexGuideMsg {
 	/* 인덱스 페이지에서만 적용됨 */

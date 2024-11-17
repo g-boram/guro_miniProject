@@ -3,64 +3,87 @@
 
 
 /* 템플릿 header#header 시작 */
-/*
-header#header {
-	border: 1px solid #000;
-}
-*/
 #header>* {
-	/*border: 1px solid #f80;*/
 	margin: 0 20px;
 }
 #header>nav#gnb {
 	padding: 10px;
 	flex: 1;
 }
+#header>#headerLogo>#headerName {
+	display: flex;
+	flex-direction: column;
+}
+#header>#headerLogo>#headerName>#first {
+    font-size: 40px;
+    font-weight: bold;
+}
+#header>#headerLogo>#headerName>#second {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+
 #header>#gnb>ul#mainMenu {
 	height: 80px;
-	/*border: 2px solid #08f;*/	
-	align-items: center;	
-	justify-content: center;
+	align-items: end;	
+	justify-content: end;
 }
 #header>#gnb>#mainMenu>li:nth-child(2n-1) {
 	width: 100px;
-	/*border: 1px solid #000;*/
 }
 #header>#gnb>#mainMenu>li:nth-child(2n) {
 	margin: 0 10px;
 }
 #header>#gnb>#mainMenu>li>a {
-	color: #555;
+	color: gray;
 	width: 100px;
-	font-size: 18px;
+	font-size: 14px;
 	text-align: center;
 	display: inline-block;
 }
 #header>#gnb>#mainMenu>li:hover>a {
+	color: black;
 	font-weight: bold;
 }
 /* 템플릿  header#header 끝 */
 
 
+
+
+
 /*  템플릿 main#main nav#mainLNB 시작 */
-main#main>div#lnb>nav#mainLNB>ul#lnbMainMenu>li {
-	width: 140px;
-	border: 1px solid #000;
+div#lnb>nav#mainLNB {
+	width: 1400px;
+	height: 40px;
 }
-main#main>#lnb>#mainLNB a {
-	width: 140px;
+div#lnb>nav#mainLNB>ul#lnbMainMenu{
+	display: flex;
+	justify-content: center;
+}
+
+div#lnb>nav#mainLNB>ul#lnbMainMenu>li {
+	width: 150px;
+}
+#lnb>#mainLNB a {
+	width: 150px;
 	height: 36px;
 	font-size: 18px;
 	line-height: 36px;
-	text-align: right;
+	text-align: center;
 	padding-right: 30px;
 	display: inline-block;
 }
-main#main>#lnb>#mainLNB li:hover>a {
+#lnb>#mainLNB li:hover>a {
 	font-weight: bold;
+	font-size: 20px;
 }
 /* 템플릿  main#main nav#mainLNB 끝 */
 
+main#main > div#contents {
+	min-height: 800px;
+	margin-top: 20px;
+}
 
 
 

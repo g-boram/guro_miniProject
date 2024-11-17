@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+h2 {
+	color:  black;
+	border-bottom: 1px solid #000;
+	padding: 10px;
+	margin: 20px 0;
+}
+
+.gallery {
+    padding: 0;
+    width: 1400px;
+    display: flex;
+}
+ .boardRow {
+    padding: 0;
+    width: 100%;
+    display: flex;
+}
+.boardItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.boardImg {
+    width: 200px;
+    height: 280px;
+    margin-bottom: 10px;
+}
+
+.boardImg img {
+    width: 200px;
+    height: 280px;
+}

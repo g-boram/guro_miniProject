@@ -10,7 +10,6 @@ String uId_Session = (String)session.getAttribute("uId_Session");
 <jsp:useBean id="mMgr" class="pack.dao.MemberMgr" />
 
 <%
-out.print(uId_Session);
 MemberBean mBean = mMgr.modifyMember(uId_Session);
 %>
     
@@ -26,9 +25,13 @@ MemberBean mBean = mMgr.modifyMember(uId_Session);
 <body>
 	<div id="wrap">
 		<!-- 헤더템플릿 시작 -->
-			<%@ include file="/ind/headerTmp.jsp" %>
+		<%@ include file="/ind/headerTmp.jsp" %>
 		<!-- 헤더템플릿 끝 -->
-		
+		<div id="lnb">
+			<!-- 메인 LNB 템플릿 시작 -->
+			<%@ include file="/ind/mainLnbTmp.jsp" %>
+			<!-- 메인 LNB 템플릿 끝 -->
+		</div>
 		<main id="main" class="dFlex">
 		
 			<!-- 실제 작업 영역 시작 -->

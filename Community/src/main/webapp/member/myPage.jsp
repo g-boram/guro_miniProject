@@ -16,24 +16,49 @@
 		<!-- 헤더템플릿 시작 -->
 			<%@ include file="/ind/headerTmp.jsp" %>
 		<!-- 헤더템플릿 끝 -->
-		
+		<div id="lnb">
+			<!-- 메인 LNB 템플릿 시작 -->
+				<%@ include file="/ind/mainLnbTmp.jsp" %>
+			<!-- 메인 LNB 템플릿 끝 -->
+		</div>
 		<main id="main" class="dFlex">
-			<div id="lnb">
-				<!-- 메인 LNB 템플릿 시작 -->
-					<%@ include file="/ind/mainLnbTmp.jsp" %>
-				<!-- 메인 LNB 템플릿 끝 -->
-			</div>
-			
 			<!-- 실제 작업 영역 시작 -->
 			<div id="contents">
-				<h1>LNB 메뉴에서 작업을 선택하세요</h1>
+				<div id="myPageContent" style="
+					display: flex;
+					height: 500px;
+					justify-content: center;
+					align-items: center;
+				">
+					<div id="myPageBtn" style="
+						width: 200px;
+						height: 50px;
+						background-color: black;
+						border-radius:5px;
+						margin-right:30px;
+						display: flex;
+						justify-content: center;
+						align-items: center;	
+					"><a href="/member/memberMod.jsp" style="color: #fff;">회원정보 수정</a></div>
+					<div id="myPageBtn"  style="
+						width: 200px;
+						height: 50px;
+						background-color: black;
+						border-radius:5px;
+						margin-right:30px;
+						display: flex;
+						justify-content: center;
+						align-items: center;	
+					"><a href="/member/memberQuit.jsp" style="color: #fff;">회원탈퇴</a></div>
+				</div>
+				
 			</div>			
 			<!-- 실제 작업 영역 끝 -->
 		</main>
 		<!-- main#main -->
 		
 		<!-- 푸터템플릿 시작 -->
-			<%@ include file="/ind/footerTmp.jsp" %>
+		<%@ include file="/ind/footerTmp.jsp" %>
 		<!-- 푸터템플릿 끝 -->
 		
 	</div>

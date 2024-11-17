@@ -3,27 +3,27 @@
 
 <jsp:useBean id="mMgr" class="pack.dao.MemberMgr" scope="page" />
 <%
-if (session.getAttribute("uId_Session") == null) response.sendRedirect("/index.jsp");
-String uId = (String)session.getAttribute("uId_Session");
-String replyName = mMgr.getMemberName(uId);
+	if (session.getAttribute("uId_Session") == null) response.sendRedirect("/index.jsp");
+	String uId = (String)session.getAttribute("uId_Session");
+	String replyName = mMgr.getMemberName(uId);
 %>
 
 <jsp:useBean id="bean" class="pack.dto.BoardBean" scope="session" />
 <%
-request.setCharacterEncoding("UTF-8");
-int num = Integer.parseInt(request.getParameter("num"));
-//검색어 수신 시작
-String keyField = request.getParameter("keyField");
-String keyWord = request.getParameter("keyWord");
-//검색어 수신 끝
-
-String nowPage = request.getParameter("nowPage");
-String uname = bean.getuName();
-String subject = bean.getSubject();
-String content = bean.getContent();
-String ref = String.valueOf(bean.getRef());
-String depth = String.valueOf(bean.getDepth());
-String pos = String.valueOf(bean.getPos());
+	request.setCharacterEncoding("UTF-8");
+	int num = Integer.parseInt(request.getParameter("num"));
+	//검색어 수신 시작
+	String keyField = request.getParameter("keyField");
+	String keyWord = request.getParameter("keyWord");
+	//검색어 수신 끝
+	
+	String nowPage = request.getParameter("nowPage");
+	String uname = bean.getuName();
+	String subject = bean.getSubject();
+	String content = bean.getContent();
+	String ref = String.valueOf(bean.getRef());
+	String depth = String.valueOf(bean.getDepth());
+	String pos = String.valueOf(bean.getPos());
 %>
     
 <!DOCTYPE html>
@@ -41,15 +41,13 @@ String pos = String.valueOf(bean.getPos());
 		<!-- 헤더템플릿 시작 -->
 		<%@ include file="/ind/headerTmp.jsp" %>
 		<!-- 헤더템플릿 끝 -->
-		
+		<div id="lnb">
+			<!-- 메인 LNB 템플릿 시작 -->
+			<%@ include file="/ind/mainLnbTmp.jsp" %>
+			<!-- 메인 LNB 템플릿 끝 -->
+		</div>
 		<main id="main" class="dFlex">
-			
-			<div id="lnb">
-				<!-- 메인 LNB 템플릿 시작 -->
-				<%@ include file="/ind/mainLnbTmp.jsp" %>
-				<!-- 메인 LNB 템플릿 끝 -->
-			</div>
-			
+
 			<!-- 실제 작업 영역 시작 -->
 			<div id="contents" class="reply">
 				
@@ -84,7 +82,7 @@ String pos = String.valueOf(bean.getPos());
 								<td colspan="2" id="footTopSpace"></td>
 							</tr>
 							<tr>
-								<td colspan="2" id="hrTd"><hr></td>
+								<td colspan="2" id="hrTd"></td>
 							</tr>
 							<tr>
 								<td colspan="2" id="btnAreaTd" class="reply">
