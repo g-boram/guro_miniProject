@@ -14,31 +14,11 @@ if(request.getParameter("gnbParam") != null) {
 
 	<nav id="mainLNB">
 		<ul id="lnbMainMenu">
-		
-		<% if(uId_Session_MLTmp == null) { %>
-		
-			<li class="lnbMainLi"><a href="#">menu1</a></li>
-			<li class="lnbMainLi"><a href="#">menu2</a></li>
-			<li class="lnbMainLi"><a href="#">menu3</a></li>
-			<li class="lnbMainLi"><a href="#">menu4</a></li>
-			<li class="lnbMainLi"><a href="#">menu5</a></li>
-		
-		<% } else { %>
-			<% if(gnbParam.equals("myPage")) { %>
-				<li class="lnbMainLi"><a href="/member/memberMod.jsp">회원정보수정</a></li>
-				<li class="lnbMainLi"><a href="/member/memberQuit.jsp">회원탈퇴</a></li>
-				<li class="lnbMainLi"><a href="#">menu3</a></li>
-				<li class="lnbMainLi"><a href="#">menu4</a></li>
-				<li class="lnbMainLi"><a href="#">menu5</a></li>
-			<% } else { %>
-				<li class="lnbMainLi"><a href="#">menu1</a></li>
-				<li class="lnbMainLi"><a href="#">menu2</a></li>
-				<li class="lnbMainLi"><a href="#">menu3</a></li>
-				<li class="lnbMainLi"><a href="#">menu4</a></li>
-				<li class="lnbMainLi"><a href="#">menu5</a></li>
-			<% } %>
-			
-		<% } %>
+			<li class="lnbMainLi"><a href="#">About</a></li>
+			<li class="lnbMainLi"><a href="/ind/galleryTable.jsp">Gallery</a></li>
+			<li class="lnbMainLi"><a href="/bbs/list.jsp?gnbParam=list">News</a></li>
+			<li class="lnbMainLi"><a href="/bbs/list.jsp?gnbParam=list">Board</a></li>
+			<li class="lnbMainLi"><a href="#">Reservation</a></li>
 		</ul>
 	</nav>
 

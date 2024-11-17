@@ -14,9 +14,13 @@
 	<div id="wrap">
 		
 		<!-- 헤더템플릿 시작 -->
-			<%@ include file="/ind/headerTmp.jsp" %>
+		<%@ include file="/ind/headerTmp.jsp" %>
 		<!-- 헤더템플릿 끝 -->
-		
+		<div id="lnb">
+			<!-- 메인 LNB 템플릿 시작 -->
+				<%@ include file="/ind/mainLnbTmp.jsp" %>
+			<!-- 메인 LNB 템플릿 끝 -->
+		</div>
 		<main id="main" class="dFlex">
 			<!-- 실제 작업 영역 시작 -->
 			<div id="contents" class="memQuitDiv">
@@ -29,6 +33,10 @@
 			<!-- 실제 작업 영역 끝 -->
 		</main>
 		<!-- main#main -->
+		
+		<!-- 푸터템플릿 시작 -->
+		<%@ include file="/ind/footerTmp.jsp" %>
+		<!-- 푸터템플릿 끝 -->
 		
 	</div>
 	<!-- div#wrap -->

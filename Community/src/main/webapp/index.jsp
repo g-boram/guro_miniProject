@@ -12,42 +12,36 @@
 </head>
 <body>
 	<div id="wrap">
-		<!-- 헤더템플릿 시작, iframe으로 변경 -->
 			<%@ include file="/ind/headerTmp.jsp" %>
-		<!-- 헤더템플릿 끝 -->
-		
-		<main id="main" class="dFlex">
-			
 			<div id="lnb">
-				<!-- 메인 LNB 템플릿 시작 -->
-					<%@ include file="/ind/mainLnbTmp.jsp" %>
-				<!-- 메인 LNB 템플릿 끝 -->
+				<%@ include file="/ind/mainLnbTmp.jsp" %>
 			</div>
-			
-			<!-- 실제 작업 영역 시작 -->
-			<div id="contents">
+		<main id="main" >
+			<div id="contents" class="mainContent">
+				<!-- Slide -->
+				<div id="lnb">
+					<%@ include file="/ind/mainSlide.jsp" %>
+				</div>
 				
-				<h1>Main</h1>
-				<h2 id="indexGuideMsg">
-				<% if(uId_Session == null ) { %>	
-					작업 중(회원인증, BBS 등)<br>
-					메인에 노출하고 싶은 결과를 출력	
-				<% } else {
-					out.print(uId_Session + "님이 로그인했습니다.");	
-				   } %>	
-				</h2>
+				<div id="lnb">
+					<%@ include file="/ind/galleryList.jsp" %>
+				</div>
+				<div id="lnb">
+                   	<img src="../images/mainImg/mainImg1.png" width="100%" alt="mainImg1">
+               	</div>
+               	<div id="lnb">
+                   	<img src="../images/mainImg/mainImg2.png" width="100%" alt="mainImg2">
+               	</div>
+               	<div id="lnb">
+                   	<img src="../images/mainImg/mainImg3.png" width="100%" alt="mainImg3">
+               	</div>
+               	<div id="lnb">
+                   	<img src="../images/mainImg/mainImg4.png" width="100%" alt="mainImg4">
+               	</div>
 			</div>
-			<!-- 실제 작업 영역 끝 -->
-			
 		</main>
-		<!-- main#main -->
-		
-		<!-- footer 템플릿 시작 -->
-			<%@ include file="/ind/footerTmp.jsp" %>
-		<!-- footer 템플릿 끝 -->
-		
+		<%@ include file="/ind/footerTmp.jsp" %>
 	</div>
-	<!-- div#wrap -->
 	<script src="/source/jquery-3.6.0.min.js"></script>
 	<script src="/script/script.js"></script>
 </body>

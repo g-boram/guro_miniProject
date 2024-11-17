@@ -28,7 +28,7 @@ public class BoardMgr {
 	Statement stmt = null;
 	ResultSet rs = null;
 	
-	private static final String SAVEFOLDER = "D:\\git_workSpace\\guroAi_MiniProj\\Community\\src\\main\\webapp\\fileupload";
+	private static final String SAVEFOLDER = "/Users/goboram_1/git/guro_miniProject/Community/src/main/webapp/fileupload";
 	private static String encType = "UTF-8";
 	private static int maxSize = 10 * 1024 * 1024;
 	
@@ -439,5 +439,8 @@ public class BoardMgr {
 		return cnt;
 	}
 	/* 답변글 끼어들기 끝 (/bbs/replyProc.jsp) */
-	
 }
+
+
+
+

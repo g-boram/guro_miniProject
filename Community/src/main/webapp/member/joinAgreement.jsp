@@ -13,16 +13,14 @@
 </head>
 <body>
 	<div id="wrap">
-		
 		<!-- 헤더템플릿 시작 -->
-			<%@ include file="/ind/headerTmp.jsp" %>
+		<%@ include file="/ind/headerTmp.jsp" %>
 		<!-- 헤더템플릿 끝 -->
 		
 		<main id="main" class="dFlex">
 			
 			<!-- 실제 작업 영역 시작 -->
 			<div id="contents" class="joinAgree">
-			
 				<div id="chkAllArea">
 					<label>
 						<input type="checkbox" id="chkAll">
@@ -36,7 +34,7 @@
 						<!-- iframe, textarea, div 중 선택하여 제작한다. -->
 						<iframe src="/ind/usingAgree.jsp" class="usingAgree"></iframe>
 						<label>
-							이용약관에 동의하십니까?
+							<span>이용약관에 동의하십니까?</span>
 							<input type="checkbox" class="usingAgreeChk chkRequired" data-link="0">
 							동의함 (필수)
 						</label>
@@ -46,7 +44,7 @@
 						<h3>[필수] 개인정보 수집 및 이용 동의</h3>
 						<iframe src="/ind/personalInfoAgree.jsp" class="usingAgree"></iframe>
 						<label>
-							개인정보 수집 및 이용에 동의하십니까?
+							<span>개인정보 수집 및 이용에 동의하십니까?</span>
 							<input type="checkbox" class="usingAgreeChk chkRequired" data-link="1">
 							동의함 (필수)
 						</label>
@@ -56,7 +54,7 @@
 						<h3>[선택] 쇼핑정보 수신 동의</h3>
 						<iframe src="/ind/shoppingInfoAgree.jsp" class="usingAgree"></iframe>
 						<label>
-							쇼핑정보 수신에 동의하십니까?
+							<span>쇼핑정보 수신에 동의하십니까?</span>
 							<input type="checkbox" class="usingAgreeChk" data-link="2">
 							동의함 (선택)
 						</label>

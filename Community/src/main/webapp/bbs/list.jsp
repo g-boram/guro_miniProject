@@ -1,7 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<% String uId_Session = (String)session.getAttribute("uId_Session"); %>
+<% 
+	String uId_Session = (String)session.getAttribute("uId_Session");
+	String auth = (String)session.getAttribute("auth_Session");
+%>
 
 <%@ page import="pack.dto.BoardBean,java.util.Vector" %>
 <jsp:useBean id="bMgr" class="pack.dao.BoardMgr" />
@@ -67,14 +70,14 @@ Vector<BoardBean> vList = null;
 		<!-- 헤더템플릿 시작 -->
 		<%@ include file="/ind/headerTmp.jsp" %>
 		<!-- 헤더템플릿 끝 -->
-		
+		<div id="lnb">
+			<!-- 메인 LNB 템플릿 시작 -->
+			<%@ include file="/ind/mainLnbTmp.jsp" %>
+			<!-- 메인 LNB 템플릿 끝 -->
+		</div>
 		<main id="main" class="dFlex">
 			
-			<div id="lnb">
-				<!-- 메인 LNB 템플릿 시작 -->
-				<%@ include file="/ind/mainLnbTmp.jsp" %>
-				<!-- 메인 LNB 템플릿 끝 -->
-			</div>
+			
 			
 			<!-- 실제 작업 영역 시작 -->
 			<div id="contents" class="bbsList">
@@ -150,10 +153,12 @@ Vector<BoardBean> vList = null;
 						
 						<tr id="listBtnArea">
 							<td colspan="2">
-							<% if (uId_Session == null) { %>
-								<button type="button" id="loginAlertBtn" class="listBtnStyle">글쓰기</button>
-							<% } else { %>
+							<%  if (auth != null) { %>
+								<%  if (auth.equals("manager")) { %>
 								<button type="button" id="writeBtn" class="listBtnStyle">글쓰기</button>
+								<% } %>
+							<% } else { %>
+								<!-- <button type="button" id="writeBtn" class="listBtnStyle">글쓰기</button> -->
 							<% } %>
 							</td>
 							<td colspan="3">
@@ -186,23 +191,8 @@ Vector<BoardBean> vList = null;
 							<td colspan="5" id="pagingTd">
 							<%
 							int pageStart = (nowBlock - 1) * pagePerBlock + 1;
-							// 26개 자료기준
-							// 현재 기준	numPerPage : 5;		// 페이지당 출력 데이터 수
-							//				pageperBlock : 5;	// 블럭당 페이지 수
-							//				nowBlock : 현재블럭
-							//				totalBlock : 전체블럭
-							// ----------------------------------------------------------
-							//				totalRecord : 26 	totalPage : 6
-							// 적용결과	nowBlock : 1 => pageStart : 1 	pageEnd : 5
-							// 			nowBlock : 2 => pageStart : 6 	pageEnd : 6(= totalPage)
-							
 							int pageEnd = (nowBlock < totalBlock) ? pageStart + pagePerBlock - 1 : totalPage;
-							
-							// 블럭당 5페이지 출력 =>	pageStart 	pageEnd
-							//						1블럭		1 			5
-							//						2블럭		6 			10
-							
-							// 블럭마다 시작되는 첫 페이지와 마지막 페이지 관련 작업
+
 							if (totalPage != 0) { 	// 전체 페이지가 0이 아니라면 = 게시글이 1개로도 있다면
 							%>
 								<% if (nowBlock>1) { //페이지 블럭이 2이상이면 => 2개 이상의 블럭이 있어야 가능 %>
